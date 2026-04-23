@@ -29,3 +29,8 @@ jobs:
       uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+
+    - name: Build, Test and Analyze
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    
+      run: ./gradlew test jacocoTestReport sonar
