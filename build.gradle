@@ -8,11 +8,10 @@ plugins {
 
 sonar {
     properties {
-        property "sonar.projectKey", "VOTRE_PROJECT_KEY"
-        property "sonar.organization", "VOTRE_ORGANISATION"
+        property "sonar.projectKey", "GoatsSoftware_GoatCoursDevOps"
+        property "sonar.organization", "goatssoftware"
         property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/test/jacocoTestReport.xml"
-    }
+        property "sonar.coverage.jacoco.xmlReportPaths", "${layout.buildDirectory.get()}/reports/jacoco/test/jacocoTestReport.xml"    }
 }
 
 group = 'devops'
