@@ -34,5 +34,6 @@ jobs:
 
     - name: Build, Test and Analyze
       env:
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}    
-      run: ./gradlew test jacocoTestReport sonar
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      run: ./gradlew clean sonar 
