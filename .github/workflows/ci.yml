@@ -3,6 +3,8 @@ name: Test Goat Manager Application
 on:
   push:
     branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
 
 jobs:
   build-and-test:
